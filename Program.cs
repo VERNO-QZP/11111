@@ -130,8 +130,7 @@ namespace ConsoleApp20
             report.AppendLine(Section("6. Информация о системе", RunCommand("systeminfo", "")));
             report.AppendLine(Section("7. Сетевые подключения", RunCommand("netstat", "-an")));
 
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "diagnostika.txt");
-            WriteText(path, report.ToString());
+            WriteText(@"C:\Users\Академия\Desktop\diagnostika.txt", report.ToString());
         }
 
         // Запись текста в файл (с обработкой ошибок)
